@@ -3,7 +3,7 @@
 Please fill out:
 * Student name: Crystal Dugan
 * Student pace: self-paced 
-* Scheduled project review date/time: 07-12-19 6:15pm EST
+* Scheduled project review date/time: date/time: 07-09-19 6:15pm EST
 * Instructor name: Eli Thomas
 * Blog post URL: https://cldugan.github.io/feature_selection_-_module_1_project
 
@@ -31,12 +31,8 @@ import statsmodels.formula.api as smf
 from statsmodels.formula.api import ols
 import scipy.stats as stats
 plt.style.use('bmh')
-%matplotlib notebook
+%matplotlib inline
 ```
-
-    /anaconda3/lib/python3.6/site-packages/statsmodels/compat/pandas.py:56: FutureWarning: The pandas.core.datetools module is deprecated and will be removed in a future version. Please use the pandas.tseries module instead.
-      from pandas.core import datetools
-
 
 # Obtain Data
 
@@ -96,7 +92,7 @@ kc_df.head()
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>7129300520</td>
       <td>10/13/2014</td>
       <td>221900.0</td>
@@ -120,7 +116,7 @@ kc_df.head()
       <td>5650</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>6414100192</td>
       <td>12/9/2014</td>
       <td>538000.0</td>
@@ -144,7 +140,7 @@ kc_df.head()
       <td>7639</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>5631500400</td>
       <td>2/25/2015</td>
       <td>180000.0</td>
@@ -168,7 +164,7 @@ kc_df.head()
       <td>8062</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>2487200875</td>
       <td>12/9/2014</td>
       <td>604000.0</td>
@@ -192,7 +188,7 @@ kc_df.head()
       <td>5000</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>1954400510</td>
       <td>2/18/2015</td>
       <td>510000.0</td>
@@ -278,7 +274,7 @@ kc_df.head()
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>221900.0</td>
       <td>3</td>
       <td>1.00</td>
@@ -300,7 +296,7 @@ kc_df.head()
       <td>5650</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>538000.0</td>
       <td>3</td>
       <td>2.25</td>
@@ -322,7 +318,7 @@ kc_df.head()
       <td>7639</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>180000.0</td>
       <td>2</td>
       <td>1.00</td>
@@ -344,7 +340,7 @@ kc_df.head()
       <td>8062</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>604000.0</td>
       <td>4</td>
       <td>3.00</td>
@@ -366,7 +362,7 @@ kc_df.head()
       <td>5000</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>510000.0</td>
       <td>3</td>
       <td>2.00</td>
@@ -441,7 +437,7 @@ kc_df.describe()
   </thead>
   <tbody>
     <tr>
-      <th>count</th>
+      <td>count</td>
       <td>2.159700e+04</td>
       <td>21597.000000</td>
       <td>21597.000000</td>
@@ -462,7 +458,7 @@ kc_df.describe()
       <td>21597.000000</td>
     </tr>
     <tr>
-      <th>mean</th>
+      <td>mean</td>
       <td>5.402966e+05</td>
       <td>3.373200</td>
       <td>2.115826</td>
@@ -483,7 +479,7 @@ kc_df.describe()
       <td>12758.283512</td>
     </tr>
     <tr>
-      <th>std</th>
+      <td>std</td>
       <td>3.673681e+05</td>
       <td>0.926299</td>
       <td>0.768984</td>
@@ -504,7 +500,7 @@ kc_df.describe()
       <td>27274.441950</td>
     </tr>
     <tr>
-      <th>min</th>
+      <td>min</td>
       <td>7.800000e+04</td>
       <td>1.000000</td>
       <td>0.500000</td>
@@ -525,7 +521,7 @@ kc_df.describe()
       <td>651.000000</td>
     </tr>
     <tr>
-      <th>25%</th>
+      <td>25%</td>
       <td>3.220000e+05</td>
       <td>3.000000</td>
       <td>1.750000</td>
@@ -546,7 +542,7 @@ kc_df.describe()
       <td>5100.000000</td>
     </tr>
     <tr>
-      <th>50%</th>
+      <td>50%</td>
       <td>4.500000e+05</td>
       <td>3.000000</td>
       <td>2.250000</td>
@@ -567,7 +563,7 @@ kc_df.describe()
       <td>7620.000000</td>
     </tr>
     <tr>
-      <th>75%</th>
+      <td>75%</td>
       <td>6.450000e+05</td>
       <td>4.000000</td>
       <td>2.500000</td>
@@ -588,7 +584,7 @@ kc_df.describe()
       <td>10083.000000</td>
     </tr>
     <tr>
-      <th>max</th>
+      <td>max</td>
       <td>7.700000e+06</td>
       <td>33.000000</td>
       <td>8.000000</td>
@@ -829,7 +825,7 @@ kc_df.head()
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>221900.0</td>
       <td>3</td>
       <td>1.00</td>
@@ -849,7 +845,7 @@ kc_df.head()
       <td>5650</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>538000.0</td>
       <td>3</td>
       <td>2.25</td>
@@ -869,7 +865,7 @@ kc_df.head()
       <td>7639</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>180000.0</td>
       <td>2</td>
       <td>1.00</td>
@@ -889,7 +885,7 @@ kc_df.head()
       <td>8062</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>604000.0</td>
       <td>4</td>
       <td>3.00</td>
@@ -909,7 +905,7 @@ kc_df.head()
       <td>5000</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>510000.0</td>
       <td>3</td>
       <td>2.00</td>
@@ -1032,7 +1028,7 @@ kc_df.describe()
   </thead>
   <tbody>
     <tr>
-      <th>count</th>
+      <td>count</td>
       <td>2.159600e+04</td>
       <td>21596.000000</td>
       <td>21596.000000</td>
@@ -1051,7 +1047,7 @@ kc_df.describe()
       <td>21596.000000</td>
     </tr>
     <tr>
-      <th>mean</th>
+      <td>mean</td>
       <td>5.402920e+05</td>
       <td>3.371828</td>
       <td>2.115843</td>
@@ -1070,7 +1066,7 @@ kc_df.describe()
       <td>12758.656649</td>
     </tr>
     <tr>
-      <th>std</th>
+      <td>std</td>
       <td>3.673760e+05</td>
       <td>0.904114</td>
       <td>0.768998</td>
@@ -1089,7 +1085,7 @@ kc_df.describe()
       <td>27275.018316</td>
     </tr>
     <tr>
-      <th>min</th>
+      <td>min</td>
       <td>7.800000e+04</td>
       <td>1.000000</td>
       <td>0.500000</td>
@@ -1108,7 +1104,7 @@ kc_df.describe()
       <td>651.000000</td>
     </tr>
     <tr>
-      <th>25%</th>
+      <td>25%</td>
       <td>3.220000e+05</td>
       <td>3.000000</td>
       <td>1.750000</td>
@@ -1127,7 +1123,7 @@ kc_df.describe()
       <td>5100.000000</td>
     </tr>
     <tr>
-      <th>50%</th>
+      <td>50%</td>
       <td>4.500000e+05</td>
       <td>3.000000</td>
       <td>2.250000</td>
@@ -1146,7 +1142,7 @@ kc_df.describe()
       <td>7620.000000</td>
     </tr>
     <tr>
-      <th>75%</th>
+      <td>75%</td>
       <td>6.450000e+05</td>
       <td>4.000000</td>
       <td>2.500000</td>
@@ -1165,7 +1161,7 @@ kc_df.describe()
       <td>10083.000000</td>
     </tr>
     <tr>
-      <th>max</th>
+      <td>max</td>
       <td>7.700000e+06</td>
       <td>11.000000</td>
       <td>8.000000</td>
@@ -1256,7 +1252,7 @@ Some features are discrete and not continuous varibles. I am trying to decide wh
 ```python
 column_list = ['bathrooms', 'bedrooms', 'condition', 'floors', 'grade']
 for col in column_list:
-    f, ax = plt.subplots(figsize=(8,6))
+    f, ax = plt.subplots(figsize=(12,6))
     sns.violinplot(x = kc_df[col], y = kc_df['price'])
     plt.title(col)
     plt.show();
@@ -1332,7 +1328,7 @@ data_pred.head()
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>221900.0</td>
       <td>3</td>
       <td>1.00</td>
@@ -1348,7 +1344,7 @@ data_pred.head()
       <td>5650</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>538000.0</td>
       <td>3</td>
       <td>2.25</td>
@@ -1364,7 +1360,7 @@ data_pred.head()
       <td>7639</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>180000.0</td>
       <td>2</td>
       <td>1.00</td>
@@ -1380,7 +1376,7 @@ data_pred.head()
       <td>8062</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>604000.0</td>
       <td>4</td>
       <td>3.00</td>
@@ -1396,7 +1392,7 @@ data_pred.head()
       <td>5000</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>510000.0</td>
       <td>3</td>
       <td>2.00</td>
@@ -1532,7 +1528,7 @@ data_pred.head()
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>12.309982</td>
       <td>3</td>
       <td>1.00</td>
@@ -1547,7 +1543,7 @@ data_pred.head()
       <td>8.639411</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>13.195614</td>
       <td>3</td>
       <td>2.25</td>
@@ -1562,7 +1558,7 @@ data_pred.head()
       <td>8.941022</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>12.100712</td>
       <td>2</td>
       <td>1.00</td>
@@ -1577,7 +1573,7 @@ data_pred.head()
       <td>8.994917</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>13.311329</td>
       <td>4</td>
       <td>3.00</td>
@@ -1592,7 +1588,7 @@ data_pred.head()
       <td>8.517193</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>13.142166</td>
       <td>3</td>
       <td>2.00</td>
@@ -1762,7 +1758,7 @@ data_df.head()
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>0.2</td>
       <td>0.066667</td>
       <td>0.322166</td>
@@ -1777,7 +1773,7 @@ data_df.head()
       <td>0.0</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>0.2</td>
       <td>0.233333</td>
       <td>0.538392</td>
@@ -1792,7 +1788,7 @@ data_df.head()
       <td>0.0</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>0.1</td>
       <td>0.066667</td>
       <td>0.203585</td>
@@ -1807,7 +1803,7 @@ data_df.head()
       <td>0.0</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>0.3</td>
       <td>0.333333</td>
       <td>0.463123</td>
@@ -1822,7 +1818,7 @@ data_df.head()
       <td>0.0</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>0.2</td>
       <td>0.200000</td>
       <td>0.420302</td>
@@ -1885,7 +1881,7 @@ data_df.describe()
   </thead>
   <tbody>
     <tr>
-      <th>count</th>
+      <td>count</td>
       <td>21596.000000</td>
       <td>21596.000000</td>
       <td>21596.000000</td>
@@ -1899,7 +1895,7 @@ data_df.describe()
       <td>21596.000000</td>
     </tr>
     <tr>
-      <th>mean</th>
+      <td>mean</td>
       <td>0.237183</td>
       <td>0.215446</td>
       <td>0.454797</td>
@@ -1913,7 +1909,7 @@ data_df.describe()
       <td>13.048196</td>
     </tr>
     <tr>
-      <th>std</th>
+      <td>std</td>
       <td>0.090411</td>
       <td>0.102533</td>
       <td>0.117836</td>
@@ -1927,7 +1923,7 @@ data_df.describe()
       <td>0.526562</td>
     </tr>
     <tr>
-      <th>min</th>
+      <td>min</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -1941,7 +1937,7 @@ data_df.describe()
       <td>11.264464</td>
     </tr>
     <tr>
-      <th>25%</th>
+      <td>25%</td>
       <td>0.200000</td>
       <td>0.166667</td>
       <td>0.375546</td>
@@ -1955,7 +1951,7 @@ data_df.describe()
       <td>12.682307</td>
     </tr>
     <tr>
-      <th>50%</th>
+      <td>50%</td>
       <td>0.200000</td>
       <td>0.233333</td>
       <td>0.455945</td>
@@ -1969,7 +1965,7 @@ data_df.describe()
       <td>13.017003</td>
     </tr>
     <tr>
-      <th>75%</th>
+      <td>75%</td>
       <td>0.300000</td>
       <td>0.266667</td>
       <td>0.536222</td>
@@ -1983,7 +1979,7 @@ data_df.describe()
       <td>13.377006</td>
     </tr>
     <tr>
-      <th>max</th>
+      <td>max</td>
       <td>1.000000</td>
       <td>1.000000</td>
       <td>1.000000</td>
@@ -2030,12 +2026,12 @@ data_df.info()
     price            21596 non-null float64
     waterfront       21596 non-null category
     dtypes: category(1), float64(11)
-    memory usage: 2.0 MB
+    memory usage: 2.6 MB
 
 
 # Modeling the Data
 
-### Running Ordinary Ordinary Squares regression experiments in Statsmodels
+### Running Ordinary Least Squares regression experiments in Statsmodels
 I am using StatsModels because the summay contains a lot of information and the layout is easy to read.
 
 
@@ -2063,10 +2059,10 @@ model.summary()
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   3767.</td> 
 </tr>
 <tr>
-  <th>Date:</th>             <td>Sat, 30 Mar 2019</td> <th>  Prob (F-statistic):</th>  <td>  0.00</td>  
+  <th>Date:</th>             <td>Sun, 01 Mar 2020</td> <th>  Prob (F-statistic):</th>  <td>  0.00</td>  
 </tr>
 <tr>
-  <th>Time:</th>                 <td>23:05:00</td>     <th>  Log-Likelihood:    </th> <td> -5221.1</td> 
+  <th>Time:</th>                 <td>16:34:33</td>     <th>  Log-Likelihood:    </th> <td> -5221.1</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td> 21596</td>      <th>  AIC:               </th> <td>1.047e+04</td>
@@ -2135,7 +2131,7 @@ model.summary()
 <tr>
   <th>Kurtosis:</th>      <td> 3.225</td> <th>  Cond. No.          </th> <td>    51.7</td>
 </tr>
-</table>
+</table><br/><br/>Warnings:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 
 
 
@@ -2192,7 +2188,7 @@ np.mean(cv_results)
 
 
 
-    -0.09584644256982353
+    -0.09584644256982355
 
 
 
@@ -2259,10 +2255,10 @@ model1.summary()
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   4121.</td> 
 </tr>
 <tr>
-  <th>Date:</th>             <td>Sun, 31 Mar 2019</td> <th>  Prob (F-statistic):</th>  <td>  0.00</td>  
+  <th>Date:</th>             <td>Sun, 01 Mar 2020</td> <th>  Prob (F-statistic):</th>  <td>  0.00</td>  
 </tr>
 <tr>
-  <th>Time:</th>                 <td>14:09:50</td>     <th>  Log-Likelihood:    </th> <td> -5260.7</td> 
+  <th>Time:</th>                 <td>16:36:48</td>     <th>  Log-Likelihood:    </th> <td> -5260.7</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td> 21596</td>      <th>  AIC:               </th> <td>1.054e+04</td>
@@ -2328,7 +2324,7 @@ model1.summary()
 <tr>
   <th>Kurtosis:</th>      <td> 3.217</td> <th>  Cond. No.          </th> <td>    51.3</td>
 </tr>
-</table>
+</table><br/><br/>Warnings:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 
 
 
@@ -2346,7 +2342,7 @@ np.mean(cv_results1)
 
 
 
-    -0.09624959494257829
+    -0.0962495949425783
 
 
 
@@ -2361,7 +2357,7 @@ outcome = 'price'
 predictors2 = data_dr_water.drop(['price'], axis=1)
 pred_sum2 = "+".join(predictors2.columns)
 formula2 = outcome + "~" + pred_sum2
-model2 = ols(formula= formula, data=data_dr_water).fit()
+model2 = ols(formula= formula2, data=data_dr_water).fit()
 model2.summary()
 ```
 
@@ -2380,10 +2376,10 @@ model2.summary()
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   4013.</td> 
 </tr>
 <tr>
-  <th>Date:</th>             <td>Sun, 17 Mar 2019</td> <th>  Prob (F-statistic):</th>  <td>  0.00</td>  
+  <th>Date:</th>             <td>Sun, 01 Mar 2020</td> <th>  Prob (F-statistic):</th>  <td>  0.00</td>  
 </tr>
 <tr>
-  <th>Time:</th>                 <td>22:57:06</td>     <th>  Log-Likelihood:    </th> <td> -5447.3</td> 
+  <th>Time:</th>                 <td>16:42:54</td>     <th>  Log-Likelihood:    </th> <td> -5447.3</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td> 21596</td>      <th>  AIC:               </th> <td>1.092e+04</td>
@@ -2449,7 +2445,7 @@ model2.summary()
 <tr>
   <th>Kurtosis:</th>      <td> 3.266</td> <th>  Cond. No.          </th> <td>    51.7</td>
 </tr>
-</table>
+</table><br/><br/>Warnings:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 
 
 
@@ -2467,7 +2463,7 @@ np.mean(cv_results2)
 
 
 
-    -0.09884575111889718
+    -0.09832069899904562
 
 
 
@@ -2477,7 +2473,7 @@ Removing waterfront hurts my model.  I will keep the original model and move on 
 
 ### Location, location, location
 
-I have three dependent variables left to examine; lat, long, and zipcode.  These all are geographical data indicating where the houses are located. I will look at each one to see how best to add to my model.
+I have three independent variables left to examine; lat, long, and zipcode.  These all are geographical data indicating where the houses are located. I will look at each one to see how best to add to my model.
 
 
 ```python
@@ -2586,7 +2582,7 @@ Not normally distributed at all. Defininitely categorical.
 
 
 ```python
-kc_df['zipcode'].value_counts();
+kc_df['zipcode'].value_counts()
 ```
 
 
@@ -2597,57 +2593,7 @@ kc_df['zipcode'].value_counts();
     98115    583
     98052    574
     98117    553
-    98042    547
-    98034    545
-    98118    507
-    98023    499
-    98006    498
-    98133    493
-    98059    468
-    98058    455
-    98155    446
-    98074    441
-    98033    432
-    98027    412
-    98125    409
-    98056    406
-    98053    403
-    98001    361
-    98075    359
-    98126    354
-    98092    351
-    98144    343
-    98106    335
-    98116    330
-    98029    321
-    98199    317
-    98004    317
             ... 
-    98112    269
-    98168    269
-    98055    268
-    98107    266
-    98136    263
-    98178    262
-    98030    256
-    98177    255
-    98166    254
-    98022    233
-    98105    229
-    98045    220
-    98002    199
-    98077    198
-    98011    195
-    98019    190
-    98108    186
-    98119    184
-    98005    168
-    98007    141
-    98188    136
-    98032    125
-    98014    124
-    98070    117
-    98109    109
     98102    104
     98010    100
     98024     80
@@ -2759,7 +2705,7 @@ final_df.info()
     ZC_98198         21596 non-null uint8
     ZC_98199         21596 non-null uint8
     dtypes: category(1), float64(11), uint8(70)
-    memory usage: 3.4 MB
+    memory usage: 4.1 MB
 
 
 
@@ -2795,10 +2741,10 @@ model_fin.summary()
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th>  <td>   1900.</td> 
 </tr>
 <tr>
-  <th>Date:</th>             <td>Sat, 30 Mar 2019</td> <th>  Prob (F-statistic):</th>   <td>  0.00</td>  
+  <th>Date:</th>             <td>Sun, 01 Mar 2020</td> <th>  Prob (F-statistic):</th>   <td>  0.00</td>  
 </tr>
 <tr>
-  <th>Time:</th>                 <td>23:22:20</td>     <th>  Log-Likelihood:    </th>  <td>  5749.7</td> 
+  <th>Time:</th>                 <td>16:45:18</td>     <th>  Log-Likelihood:    </th>  <td>  5749.7</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td> 21596</td>      <th>  AIC:               </th> <td>-1.134e+04</td>
@@ -3074,7 +3020,7 @@ model_fin.summary()
 <tr>
   <th>Kurtosis:</th>       <td> 5.611</td>  <th>  Cond. No.          </th> <td>    116.</td>
 </tr>
-</table>
+</table><br/><br/>Warnings:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 
 
 
@@ -3174,7 +3120,7 @@ print('Test Mean Squarred Error:', test_mse)
     Test Mean Squarred Error: 0.03337063914965873
 
 
-The test MSE and train MSE are very similar, giving me confidence the model didn't overfit the model.
+The test MSE and train MSE are very similar, giving me confidence that the model isn't overfit.
 
 # Interpret Results
 
@@ -3185,7 +3131,9 @@ For the final model used 12 independent variables (80 if you count the 69 dummy 
 The p-values of all my independent variables are less than 0.05 which shows that they all have greater than 95% chance that the coefficient isn't zero. Another factor that gives me confidence in the performance of my model is the k-folds cross validation. I had little variation across the resulting negative mean squared errors. (Average of -0.035 and a CV of 4.9%) I also performed a train-test-split validation which produced similar results. (Train: 0.035 and Test: 0.033) This shows I haven't over fit the model.
 
 #### Interpreting Coefficients
-Here is a closer look at some of the coefficients (the dependent variable, 'price', is log-transformed):  
+Here is a closer look at some of the coefficients (the dependent variable, 'price', is log-transformed): 
+
+
 The min-max scaled and log-transformed independent variable 'sqft_living' has a coefficient of 1.3788. For a 1% increase/decrease in 'sqft_living' we expect about a 1.3788% increase/decrease in sales price with everything else remaining unchanged.
 
 The categorical feature 'waterfront'has a coefficient of 0.6583. So if the property has a view of the water it increases the price about 93% with everything else remaining unchanged.
@@ -3200,38 +3148,6 @@ The min-max scaled feature 'grade' has a coefficient of 1.0339. If, for example,
 ```python
 
 ```
-
-
-```python
-# code to transform and scale variables. just for testing.
-# bedroom = (4-min(data_pred['bedrooms']))/(max(data_pred['bedrooms'])-min(data_pred['bedrooms']))
-# bathroom = (3-min(data_pred['bathrooms']))/(max(data_pred['bathrooms'])-min(data_pred['bathrooms']))
-# sqft_living = ((np.log(1960))-min(data_pred['sqft_living']))/(max(data_pred['sqft_living'])-min(data_pred['sqft_living']))
-# sqft_lot = ((np.log(5000))-min(data_pred['sqft_lot']))/(max(data_pred['sqft_lot'])-min(data_pred['sqft_lot']))
-# floor = (1-min(data_pred['floors']))/(max(data_pred['floors'])-min(data_pred['floors']))
-# waterfront = 0
-# condition = (5-min(data_pred['condition']))/(max(data_pred['condition'])-min(data_pred['condition']))
-# grade = (7-min(data_pred['grade']))/(max(data_pred['grade'])-min(data_pred['grade']))
-# year = (1965-min(data_pred['yr_built']))/(max(data_pred['yr_built'])-min(data_pred['yr_built']))
-# living15 = ((np.log(1360))-min(data_pred['sqft_living15']))/(max(data_pred['sqft_living15'])-min(data_pred['sqft_living15']))
-# lot15 = ((np.log(5000))-min(data_pred['sqft_lot15']))/(max(data_pred['sqft_lot15'])-min(data_pred['sqft_lot15']))
-# # zip = 98125
-
-# price = 12.1556 + (bedroom*(-0.1885))+(bathroom*0.3335)+(sqft_living*1.3788)+(sqft_lot*0.6374)+(floor*0.0325)+(waterfront*0.6583)+(condition*0.1875)+(grade*1.0339)+(year*(-0.083))+(living15*0.5665)+(lot15*(-0.1606))+(-0.3872)
-
-```
-
-
-```python
-#(8-min(data_pred['grade']))/(max(data_pred['grade'])-min(data_pred['grade']))
-```
-
-
-
-
-    0.5
-
-
 
 
 ```python
